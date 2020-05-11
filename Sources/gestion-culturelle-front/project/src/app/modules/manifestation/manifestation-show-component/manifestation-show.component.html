@@ -1,0 +1,74 @@
+<h2>Voir une manifestation</h2>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <label for="id">Id :</label>
+                        <input type="text" name="id" class="form-control" id="id" placeholder="{{manifestation.id}}"
+                            readonly>
+
+                        <label for="label">Label :</label>
+                        <input type="text" name="label" class="form-control" id="label"
+                            placeholder="{{manifestation.label}}" readonly>
+
+                        <label for="dateValidation">Date de validation :</label>
+                        <input type="text" name="dateValidation" class="form-control" id="dateValidation"
+                            placeholder="{{manifestation.dateValidation}}" readonly>
+
+                        <label for="validateur">Nom du validateur </label>
+                        <input type="text" name="validateur" class="form-control" id="validateur"
+                            placeholder="{{manifestation.validateur.nom}}" readonly>
+
+                        <label for="animation">Type d'animation :</label>
+                        <input type="text" name="animation" class="form-control" id="animation"
+                            placeholder="{{manifestation.animation.label}}" readonly>
+
+                        <label for="dateDebut">Date de debut :</label>
+                        <input type="text" name="dateDebut" class="form-control" id="dateDebut"
+                            placeholder="{{manifestation.dateDebut}}" readonly>
+
+                        <label for="dateFin">Date de fin :</label>
+                        <input type="text" name="dateFin" class="form-control" id="dateFin"
+                            placeholder="{{manifestation.dateFin}}" readonly>
+
+                        <label for="cout">Cout :</label>
+                        <input type="text" name="cout" class="form-control" id="cout"
+                            placeholder="{{manifestation.cout}}" readonly>
+
+                        <label for="label">Salle </label>
+                        <input type="text" name="label" class="form-control" id="label"
+                            placeholder="{{manifestation.salle.label}}" readonly>
+
+                        <label for="prixBillet">Prix du billet :</label>
+                        <input type="text" name="prixBillet" class="form-control" id="prixBillet"
+                            placeholder="{{manifestation.prixBillet}}" readonly>
+
+                        <label for="reservations">Réservations :</label>
+                        <input type="text" name="reservations" class="form-control" id="reservations"
+                            placeholder="{{manifestation.reservations}}" readonly>
+
+                        <label for="reservationsVip">Réservations Vip :</label>
+                        <input type="text" name="reservationsVip" class="form-control" id="reservationsVip"
+                            placeholder="{{manifestation.reservationsVip}}" readonly>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+    <br>
+    <br>
+    <a name="" id="" class="btn btn-secondary" href="#" role="button"
+        [routerLink]="['/public/manifestation-list']">Retour à la
+        liste</a>
+
+</div>

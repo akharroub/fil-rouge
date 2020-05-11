@@ -1,0 +1,48 @@
+<h2>Ajouter un user</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+  <form>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="form-group">
+
+        <label for="nom">Nom</label>
+        <input type="text" [(ngModel)]="user.nom" name="nom" id="nom" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prenom</label>
+        <input type="text" [(ngModel)]="user.prenom" name="prenom" id="prenom" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <input type="password" [(ngModel)]="user.password" name="password" id="password" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="cpassword">Confirmez le mot de passe</label>
+        <input type="password" name="cpassword" id="cpassword" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" [(ngModel)]="user.email" name="email" id="email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="adresse">Adresse</label>
+        <input type="text" [(ngModel)]="user.adresse" name="adresse" id="adresse" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <select name="role" id="role" [(ngModel)]="user.role.id" class="form-control">
+          <option *ngFor="let role of roles" [value]="role.id">{{role.label}}</option>
+        </select>
+      </div>
+
+      <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/user-list']">Annuler</a>
+
+      <input class="btn btn-secondary" type="button" value="ajouter"  (click)="add()">
+      <!--[disabled]="nom.length==0"-->
+    </div>
+  </div>
+</div>

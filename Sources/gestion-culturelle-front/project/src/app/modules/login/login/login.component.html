@@ -1,0 +1,62 @@
+
+<!-- <div class="container">
+  <div class="row justify-content-center">
+    <div class="col-4">
+
+      <div class="row">
+        <label for="username">Login</label>
+        <input [(ngModel)]="user.username" type="text" name="username" id="username" class="form-control">
+        <div class="form-group">
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="password">Password</label>
+        <input [(ngModel)]="user.password" type="password" name="password" id="password" class="form-control">
+        <div class="form-group">
+        </div>
+      </div>
+
+      <div class="row mt-1">
+        <button  (click)="login()" type="button" class="btn btn-secondary">
+          login
+        </button> -->
+       <!-- [disabled]='user.password.length==0 || user.username.length==0'88888888 -->
+<!-- 
+        <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/']">Annuler</a>
+
+      </div>
+    </div>
+
+  </div>
+</div> -->
+
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="/assets/app.png" id="icon" alt="User Icon" />
+      <h1>Gestion culturelle</h1>
+      <h2>Connexion</h2>
+    </div>
+
+    <!-- Login Form -->
+    <form>
+      <input [(ngModel)]="user.username" type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
+      <input [(ngModel)]="user.password" type="password" id="password" class="fadeIn third" name="login" placeholder="Password">
+      <input (click)="login()" type="submit" class="btn btn-secondary" value="LogIn">
+      
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a routerLink='/public/inscription' class="underlineHover" routerLinkActive=active>Inscription</a>
+    </div>
+
+  </div>
+</div>
+
+

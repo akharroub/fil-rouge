@@ -1,0 +1,37 @@
+<h2>Ajouter une salle</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form>
+        <div class="form-group">
+
+            <label for="label">Nouveau label :</label>
+            <input type="text" name="label" class="form-control" id="label" placeholder="Entrer votre label"
+                [(ngModel)]="salle.label">
+
+            <label for="capacite">Capacite de la salle :</label>
+            <input type="text" name="capacite" class="form-control" id="capacite"
+                placeholder="Entrer la capacité de la salle" [(ngModel)]="salle.capacite">
+
+            <label for="placesVip">Places réservées aux VIPs :</label>
+            <input type="text" name="placesVip" class="form-control" id="placesVip"
+                placeholder="Entrer le nombre de places reservees aux VIP " [(ngModel)]="salle.placesVip">
+
+            <label for=" fraisJournalier">Frais journaliers :</label>
+            <input type="text" name="fraisJournalier" class="form-control" id="fraisJournalier"
+                placeholder="Entrer les frais journalier" [(ngModel)]="salle.fraisJournalier">
+
+            <label for="typesalle">Type de salle :</label>
+            <select name="typesalle" id="typesalle" [(ngModel)]="salle.typeSalle.id" class="form-control" >
+                <option *ngFor="let typesalle of typeSalles" [value]="typesalle.id">{{typesalle.label}}</option>
+            </select>
+
+
+        </div>
+
+        <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/public/salle-list']">Annuler</a>
+
+        <button (click)="add()" class="btn btn-secondary" [disabled]="salle.length==0">Ajouter</button>
+
+    </form>
+</div>

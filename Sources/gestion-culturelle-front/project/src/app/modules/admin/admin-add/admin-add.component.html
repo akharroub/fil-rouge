@@ -1,0 +1,49 @@
+<h2>Ajouter un administateur</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form>
+
+        <div class="form-group">
+            <label for="nom">Nouveau nom :</label>
+            <input type="text" name="nom" class="form-control" id="nom" placeholder="Entrer votre nom"
+                [(ngModel)]="admin.nom">
+        </div>
+
+        <div class="form-group">
+        <label for="prenom">Nouveau prenom :</label>
+        <input type="text" name="prenom" class="form-control" id="prenom" placeholder="Entrer votre prenom"
+            [(ngModel)]="admin.prenom">
+    </div>
+
+        <label for="role">Role :</label>
+        <select name="role" id="role" [(ngModel)]="admin.role.id" class="form-control">
+            <option *ngFor="let role of roles" [value]="role.id">{{role.label}}</option>
+        </select>
+
+
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="text" name="date" class="form-control" id="email"
+                placeholder="Entrer email" [(ngModel)]="admin.email">
+        </div>     
+
+        <div class="form-group">
+            <label for=" password">Mot de Passe :</label>
+            <input type="text" name="password" class="form-control" id="password"
+                placeholder="Entrer le password" [(ngModel)]="admin.password">
+        </div>
+
+        <div class="form-group">
+            <label for=" adresse">Adresse :</label>
+            <input type="text" name="adresse" class="form-control" id="adresse"
+                placeholder="Entrer l'adresse" [(ngModel)]="admin.adresse">
+        </div>
+
+     
+<a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/admin-list']">Annuler</a>
+
+<button (click)="add()" class="btn btn-secondary" [disabled]="admin.length==0">Ajouter</button>
+
+</form>
+</div>

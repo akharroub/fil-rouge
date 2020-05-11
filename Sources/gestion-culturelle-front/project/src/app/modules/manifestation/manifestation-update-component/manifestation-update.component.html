@@ -1,0 +1,86 @@
+<h2>Mettre à jour une manifestation</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <label for="label">Nouveau label :</label>
+                        <input type="text" name="label" class="form-control" id="label" placeholder="Entrer votre label"
+                            [(ngModel)]="manifestation.label">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateValidation">Date de validation :</label>
+                        <input type="date" name="dateValidation" class="form-control" id="dateValidation"
+                            placeholder="Entrer la date de validation" required
+                            [(ngModel)]="manifestation.dateValidation">
+                    </div>
+
+                    <label for="validateur">Nom du validateur :</label>
+                    <select name="validateur" id="validateur" [(ngModel)]="manifestation.validateur.id"
+                        class="form-control">
+                        <option *ngFor="let validateur of admins" [value]="validateur.id">{{validateur.nom}}</option>
+                    </select>
+
+                    <label for="animation">Type d'animation :</label>
+                    <select name="animation" id="animation" [(ngModel)]="manifestation.animation.id"
+                        class="form-control">
+                        <option *ngFor="let animation of animations" [value]="animation.id">{{animation.label}}</option>
+                    </select>
+
+                    <div class="form-group">
+                        <label for="dateDebut">Date de debut :</label>
+                        <input type="date" name="dateDebut" class="form-control" id="dateDebut"
+                            placeholder="Entrer la date de debut " required [(ngModel)]="manifestation.dateDebut">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateFin">Date de fin :</label>
+                        <input type="date" name="dateFin" class="form-control" id="dateFin"
+                            placeholder="Entrer la date de fin " [(ngModel)]="manifestation.dateFin">
+                    </div>
+
+                    <label for="salle">Choix de salle :</label>
+                    <select name="salle" id="salle" [(ngModel)]="manifestation.salle.id" class="form-control">
+                        <option *ngFor="let salle of salles" [value]="salle.id">{{salle.label}}</option>
+                    </select>
+
+                    <div class="form-group">
+                        <label for=" reservations">Nombre de reservations :</label>
+                        <input type="text" name="reservations" class="form-control" id="reservations"
+                            placeholder="Entrer le nombre de reservations" [(ngModel)]="manifestation.reservations">
+                    </div>
+
+                    <div class="form-group">
+                        <label for=" reservationsVip">Nombre de reservationsVip :</label>
+                        <input type="text" name="reservationsVip" class="form-control" id="reservationsVip"
+                            placeholder="Entrer le nombre de reservationsVip"
+                            [(ngModel)]="manifestation.reservationsVip">
+                    </div>
+
+                    <label for="salle">Nom de l'annulateur :</label>
+                    <select name="annulateur" id="annulateur" [(ngModel)]="manifestation.annulateur.id"
+                        class="form-control">
+                        <option *ngFor="let annulateur of admins" [value]="annulateur.id">{{annulateur.nom}}</option>
+                    </select>
+
+                    <div class="form-group">
+                        <label for="dateAnnulation">Date d'annulation :</label>
+                        <input type="date" name="dateAnnulation" class="form-control" id="dateAnnulation"
+                            placeholder="Entrer la date d'annulation " [(ngModel)]="manifestation.dateAnnulation">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a name="" id="" class="btn btn-secondary" href="#" role="button"
+            [routerLink]="['/public/manifestation-list']">Annuler</a>
+
+        <button type="submit" class="btn btn-secondary">Valider</button>
+    </form>
+</div>

@@ -1,0 +1,53 @@
+#spring:
+#  datasource:
+#    url: jdbc:h2:file:~/afpa-gestion-culturelle
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+
+spring:
+ datasource:
+  url: jdbc:postgresql://localhost/postgres
+  password: 1234
+  username: user1
+ jpa:
+  hibernate:
+   ddl-auto: update
+
+server:
+  error:
+    include-stacktrace: always
+
+cda:
+  admin:
+    nom: resp1
+    prenom: presp1
+    login: luser1
+    password: 1234
+  security:
+    token:
+      secret: cleDeHachagePourSignatureCdA
+
+logging:
+  level:
+    org:
+      springframework:
+        web: ERROR
+        
+             
+        
+        
+#token:
+#  secret: bF7449XF5lc5iz5sW5Y5suX4d7ok4P7j
+
+
+
+#  properties:
+#      javax:
+#        persistence:
+#          schema-generation:
+#            create-source: metadata
+#            scripts:
+#              action: create
+#              create-target: create.sql
+

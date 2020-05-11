@@ -1,0 +1,44 @@
+<h3>Voir un administrateur</h3>
+
+<div class="panel-body">
+    <table class="table table-striped table-bordered ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Email</th>        
+                <th>Password</th>                
+                <th>Adresse</th>
+                <th>Role</th>         
+
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>{{admin.id}}</td>
+                <td>{{admin.nom}}</td>
+                <td>{{admin.prenom}}</td>
+                <td>{{admin.email}}</td>     
+                <td>{{admin.password}}</td>
+                <td>{{admin.adresse}}</td>
+                <td>{{admin.role.label}}</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br>
+    <br>
+    <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/admin-list']">Retour à la
+        liste</a>
+
+
+       
+
+
+            

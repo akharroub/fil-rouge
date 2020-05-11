@@ -1,0 +1,51 @@
+<h2>Modifier un profil</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <!-- <div class="form-group">
+                        
+                        <label for="nom">nom</label>
+                        <textarea type="text" name="nom" id="nom" readonly >user.nom</textarea>
+                    </div>
+                        <div class="form-group">
+                        <label for="prenom">prenom</label>
+                        <textarea type="text" name="prenom" id="prenom" readonly >user.prenom</textarea>
+                    </div>
+                  -->
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" [(ngModel)]="user.nom" name="nom" id="nom" class="form-control" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prenom">Prenom</label>
+                            <input type="text" [(ngModel)]="user.prenom" name="prenom" id="prenom" class="form-control" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="adresse">Adresse</label>
+                            <input type="text" [(ngModel)]="user.adresse" name="adresse" id="adresse" class="form-control" >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" [(ngModel)]="user.email" name="email" id="email" class="form-control" >
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/public']">Annuler</a>
+
+            <button type="submit" class="btn btn-secondary">Valider</button>
+    </form>
+
+</div>

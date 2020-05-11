@@ -1,0 +1,48 @@
+<h3>Liste des animations</h3>
+
+<br>
+
+<div class="panel-body">
+    <table class="table table-striped table-bordered ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Label</th>
+                <th>Type</th>
+                <th>Prix</th>
+                <th>Nombre de spectateurs prévus</th>
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let animation of animations">
+
+                <td>{{animation.id}}</td>
+                <td>{{animation.label}}</td>
+                <td>{{animation.type}}</td>
+                <td>{{animation.prix}}</td>
+                <td>{{animation.nbreSpectateursPrevus}}</td>
+
+                <td>
+                    <button (click)="redirectToShow(animation.id)" class="btn btn-sm btn-success"><fa-icon class="icon p-0" [icon]="faInfoCircle">Show</fa-icon></button>
+                    &nbsp;
+                    <button *ngIf="isAnim" (click)="redirectToUpdate(animation.id)" class="btn btn-sm btn-warning"><fa-icon [icon]="faEdit">Update</fa-icon></button>
+                    &nbsp;
+                    <button *ngIf="isRespAdmin" (click)="delete(animation.id)" class="btn btn-sm btn-danger"><fa-icon [icon]="faTrashAlt">Delete</fa-icon></button>
+           
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+   <!-- <a  name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/animation-ad']">+ Ajouter une animation </a>-->
+
+   
+
+    <a *ngIf="isAnim" name="" id="" class="btn btn-info" href="#" role="button" [routerLink]="['/animation-ad']"><fa-icon class="icon p-2" [icon]="faPlusSquare">+ Ajouter une animation</fa-icon></a>
+    &nbsp;
+    <a name="" id="" class="btn btn-info" href="#" role="button" [routerLink]="['/public']"><fa-icon class="icon p-2" [icon]="faHome">Retour à l'accueil</fa-icon></a>

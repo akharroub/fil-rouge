@@ -1,0 +1,51 @@
+<h3>Liste des manifestations</h3>
+<br>
+<div class="panel-body">
+    <table class="table table-striped table-bordered ">
+        <thead class="thead-dark">
+            <tr>
+              
+                <th>Label</th>
+                <th>Animation</th>
+                <th>Date de Debut</th>
+                <th>Date de Fin</th>
+                <th>Coût(en €)</th>
+                <th>Salle</th>
+                <th>Prix du billet(en €)</th>
+                <th>Reservations</th>
+                <th>Reservations Vip</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let manifestation of manifestations">
+
+                <td>{{manifestation.label}}</td>
+                <td>{{manifestation.animation.label}}</td>
+                <td>{{manifestation.dateDebut}}</td>
+                <td>{{manifestation.dateFin}}</td>
+                <td>{{manifestation.cout}}</td>
+                <td>{{manifestation.salle.label}}</td>
+                <td>{{manifestation.prixBillet}}</td>
+                <td>{{manifestation.reservations}}</td>
+                <td>{{manifestation.reservationsVip}}</td>
+
+                <td>
+                    <button (click)="redirectToShow(manifestation.id)" class="btn btn-sm btn-success"><fa-icon class="icon p-0" [icon]="faInfoCircle">Show</fa-icon></button>
+                    &nbsp;
+                    <button *ngIf="isRespAdmin" (click)="redirectToUpdate(manifestation.id)" class="btn btn-sm btn-warning"><fa-icon [icon]="faEdit">Update</fa-icon></button>
+                    &nbsp;
+                    <button *ngIf="isRespAdmin" (click)="delete(manifestation.id)" class="btn btn-sm btn-danger"><fa-icon [icon]="faTrashAlt">Delete</fa-icon></button>
+                    &nbsp;
+                    <button *ngIf="isClient" (click)="redirectToAddPanier(manifestation.id)" class="btn btn-sm btn-primary">Acheter</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    &nbsp;
+    <a *ngIf="isResp" name="" id="" class="btn btn-info" href="#" role="button" [routerLink]="['/manifestation-ad']"><fa-icon class="icon p-2" [icon]="faPlusSquare">+ Ajouter</fa-icon></a>
+    &nbsp;
+    <a name="" id="" class="btn btn-info" href="#" role="button" [routerLink]="['/public']"><fa-icon class="icon p-2" [icon]="faHome">Retour à l'accueil</fa-icon></a>

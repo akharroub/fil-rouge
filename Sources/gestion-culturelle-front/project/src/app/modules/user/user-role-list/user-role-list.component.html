@@ -1,0 +1,23 @@
+<br>
+<div class="panel-body">
+    <table class="table table-striped table-bordered ">
+        <thead class="thead-dark">
+            <tr>
+                    <th>nom</th>
+                    <th>prenom</th>
+                    <th>role</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of users">
+
+                    <td>{{user.nom}}</td>
+                    <td>{{user.prenom}}}</td>
+                    <td>{{user.role.id}}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/public']">Retour à l'accueil </a>
+

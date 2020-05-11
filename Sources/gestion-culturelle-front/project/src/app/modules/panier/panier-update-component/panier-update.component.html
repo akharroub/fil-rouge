@@ -1,0 +1,38 @@
+<h2>Mettre à jour un panier</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+   
+        <div class="form-group">
+
+            <label for="dateValidation">Date de validation :</label>
+            <input type="text" name="dateValidation" class="form-control" id="dateValidation"
+                placeholder="Entrer la date de validation" required [(ngModel)]="panier.dateValidation">
+
+            <label for="numClient">Numero de client :</label>
+            <input type="text" name="numClient" class="form-control" id="numClient" placeholder="Entrer le numero de client"
+                [(ngModel)]="panier.numClient">
+
+            <label for="manifestation">Type de manifestation :</label>
+            <select name="manifestation" id="manifestation" [(ngModel)]="panier.manifestation.id" class="form-control">
+                <option *ngFor="let manifestation of manifestations" [value]="manifestation.id">{{panier.manifestation.label}}
+                </option>
+            </select>
+
+            <label for="nbreBillets">Nombre de billets:</label>
+            <input type="text" name="nbreBillets" class="form-control" id="nbreBillets"
+                placeholder="Entrer le nombre de billets " [(ngModel)]="panier.nbreBillets">
+
+
+            <label for="total">Prix total :</label>
+            <input type="text" name="total" class="form-control" id="total" [(ngModel)]="panier.total">
+
+
+        </div>
+
+        <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/panier-list']">Annuler</a>
+
+        <button type="submit" class="btn btn-secondary">Valider</button>
+    </form>
+</div>

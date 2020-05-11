@@ -1,0 +1,41 @@
+<h2>Ajouter une animation</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <label for="label">Nouveau label :</label>
+                        <input type="text" name="label" class="form-control" id="label" placeholder="Entrer votre label"
+                            [(ngModel)]="animation.label">
+
+                        <label for="type">Type d'animation :</label>
+                        <input type="text" name="type" class="form-control" id="type"
+                            placeholder="Entrer le type d'animation" [(ngModel)]="animation.type">
+
+                        <label for="prix">Prix de l'animation :</label>
+                        <input type="text" name="prix" class="form-control" id="prix"
+                            placeholder="Entrer le prix de l'animation " [(ngModel)]="animation.prix">
+
+                        <label for=" nbreSpectateursPrevus">Prevision Spectateurs :</label>
+                        <input type="text" name="nbreSpectateursPrevus" class="form-control" id="nbreSpectateursPrevus"
+                            placeholder="Entrer la prevision de Spectateurs"
+                            [(ngModel)]="animation.nbreSpectateursPrevus">
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a name="" id="" class="btn btn-secondary" href="#" role="button"
+            [routerLink]="['/public/animation-list']">Annuler</a>
+
+        <button (click)="add()" class="btn btn-secondary" [disabled]="animation.length==0">Ajouter</button>
+
+    </form>
+</div>

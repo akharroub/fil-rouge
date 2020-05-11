@@ -1,0 +1,113 @@
+.entete{
+    line-Height: 1;
+   font-weight:bold;
+   text-align:center;
+   color:#CEB57B;
+   margin-left: auto;
+   margin-right: auto;
+   border-bottom-left-radius:15px;
+   border-bottom-right-radius:15px;
+   box-shadow:5px 5px 5px 0px #25282B;
+   border:1px solid #38251D;
+   width:80%;
+   padding:0; 
+   margin-top:10px;
+   margin-bottom:22px;
+   letter-spacing: 6px;
+   background-color: rgba(5,0,84,0.9)}
+ 
+body {
+    background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKNWfDPoVVrzlIwp6yYB4yTCtCYz5gBuGIrD-piG54iOIJ72pV&s);
+     background-size: cover;     
+     background-position: center;
+     background-attachment: fixed}
+
+h1 {
+    font-size:200%; 
+}
+
+#lien_connexion {
+    color:whitesmoke;
+}
+
+.col1 {
+    text-align:right;
+}
+.col2, .col4 {
+    text-align:center;
+}
+
+.col3,.col21 {
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    box-shadow:5px 5px 5px 0px #25282B;
+    border:1px solid #38251D;
+    color: rgba(5,0,84);
+    background-color: rgba(206,181,123,0.9);
+}
+
+.card1 ,.card2,.card3, .card4 {
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    box-shadow:5px 5px 5px 0px #25282B;
+    border:1px solid #38251D;
+    color: rgba(5,0,84,0.9);
+    background-color: #CEB57B
+}
+
+
+
+
+#lien_historique, #lien_partenaires, #lien_actions, #lien_salles{
+    cursor:pointer
+}
+
+#sinscrire, #seconnecter {
+    text-align: center; 
+   
+    box-shadow:5px 5px 5px 0px #25282B;
+    border:1px solid #38251D;
+    color: rgba(5,0,84,0.9);
+    background-color: rgba(206,181,123,0.9)
+}
+
+#sinscrire{
+    border-bottom-right-radius:10px;
+    border-top-right-radius:10px;
+}
+
+#seconnecter {
+    border-bottom-left-radius:10px;
+    border-top-left-radius:10px;
+   }
+
+
+img {
+    filter: sepia(50%);
+}
+   
+
+p {
+    font-size:120%;
+
+}
+
+li,a  {
+    font-size:120%; 
+    color: black; 
+}
+
+footer  {
+    text-align: center;
+    background-color:rgba(45, 48, 49, 0.8);
+    color:whitesmoke;
+}
+
+.text_historique,.text_actions,.text_salles,.text_partenaires  {
+    visibility: hidden;
+    display: inline;
+}
+
+
+
+

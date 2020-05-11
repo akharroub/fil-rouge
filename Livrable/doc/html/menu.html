@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    ​
+    <!-- Bootstrap CSS -->
+    <title>SORTIR.COM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="Style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="entete">
+            <h1>Bienvenue sur notre site évènementiel</h1>
+
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col1 col-lg-12">
+                <h5> <a id="lien_connexion" href="#seconnecter"> → S'inscrire</a></h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col2 col-lg-3">
+                    <div class="text_actions">
+                        <div class="card1" style="width: 16rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">Nos actions :</h3>
+                                <h4 class="card-subtitle mb-2 text-muted">Planification et organisation évènementielle
+                                </h4>
+                                <p class="card-text">Nous organisons ...</p>
+                                <a href="#" class="card-link">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="text_salles">
+                        <div class="card2" style="width: 16rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">Nos salles :</h3>
+                                <h4 class="card-subtitle mb-2 text-muted">3 différentes salles</h4>
+                                <p class="card-text">un stade, une salle de théatre, une salle de concert</p>
+                                <a href="#" class="card-link">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col3 col-lg-6">
+                    <h2 style="text-align:center;"><b><u>Qui sommes nous ?</u></b></h2>
+                    <ul>
+                        <li>
+                            <p id="lien_historique"> Historique.</p>
+                        </li>
+                        <li>
+                            <p id="lien_partenaires">Partenaires.</p>
+                        </li>
+                        <li>
+                            <p id="lien_actions"> Nos actions.</p>
+                        </li>
+                        <li>
+                            <p id="lien_salles"> Les salles.</p>
+                        </li>
+                        <li>
+                            <p><a class="lien_planning" href="planning.html"> Consulter le planning.</a></p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="col4 col-lg-3">
+                    <div class="text_historique">
+                        <div class="card3" style="width: 16rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">Historique :</h3>
+                                <h4 class="card-subtitle mb-2 text-muted">10 ans d'expérience</h4>
+                                <p class="card-text">+ de 500 manifestations à notre actif</p>
+                                <a href="#" class="card-link">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    <div class="text_partenaires">
+                        <div class="card4" style="width: 16rem;">
+                            <div class="card-body">
+                                <h3 class="card-title">Partenaires :</h3>
+                                <h4 class="card-subtitle mb-2 text-muted">Médias, commerces, ...</h4>
+                                <p class="card-text">La voix du Nord, Fnac, France-billet, ...</p>
+                                <a href="#" class="card-link">En savoir plus</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </br>
+        <div class="container">
+            <div class="row">
+                <div class="col11 col-lg-3">
+
+                </div>
+                <div class="col12 col-lg-3">
+                    <form id="seconnecter" method="post" action="traitement.php">
+                        <legend>Se connecter</legend>
+                        <label for="mail">Email</label><br>
+                        <input type="email" id="mail" placeholder="address@domain.com" name="address" /><br>
+                        <label for="mp">Password</label><br>
+                        <input type="password" id="mp" placeholder="?" name="pwd" /><br>
+                        <input type="submit" value="Send" id="send" /><br>
+                        </br>
+                    </form>
+                </div>
+                <div class="col13 col-lg-3">
+                    <form id="sinscrire" method="post" action="traitement.php">
+                        <legend>S'inscrire</legend>
+                        <label for="name">Nom</label><br>
+                        <input type="text" id="name" placeholder="ABC" name="nom" /><br>
+                        <label for="fname">Prenom</label><br>
+                        <input type="text" id="fname" placeholder="Abc" name="prenom" /><br>
+                        <label for="mail">Email</label><br>
+                        <input type="email" id="mail" placeholder="address@domain.com" name="address" /><br>
+                        <label for="mp">Password</label><br>
+                        <input type="password" id="mp" placeholder="?" name="pwd" /><br>
+                        <input type="submit" value="Send" id="send" /><br>
+                        </br>
+                    </form>
+                </div>
+                <div class="col14 col-lg-3">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    </br></br>
+</body>
+<footer>
+
+    <h5><img src="http://citeoffice.citedesmetiers.fr/images/events/images/Logos/AFPA.gif" height=3% width=3%>Afpa®
+        / © November MMXIX</h5>
+
+</footer>
+
+</html>

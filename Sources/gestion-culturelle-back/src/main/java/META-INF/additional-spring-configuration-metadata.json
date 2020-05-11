@@ -1,0 +1,41 @@
+{"properties": [
+
+{
+    "name": "cda.admin.password",
+    "type": "java.lang.String",
+    "description": "mot de passe par d�faut de l'admin si pas encore cree"
+  },
+  {
+    "name": "cda.admin.nom",
+    "type": "java.lang.String",
+    "description": "A description for 'cda.admin.nom'"
+  },
+  {
+    "name": "cda.admin.prenom",
+    "type": "java.lang.String",
+    "description": "A description for 'cda.admin.prenom'"
+  },
+   {
+    "name": "cda.admin.login",
+    "type": "java.lang.String",
+    "description": "A description for 'cda.admin.login'"
+  },
+  {
+    "name": "cda.security.token.secret",
+    "type": "java.lang.String",
+    "description": "le clé utilisée pour générer la signature des données"
+},
+
+
+
+
+{
+  "name": "token.secret",
+  "type": "java.lang.String",
+  "description": "A description for 'token.secret'"
+}
+
+
+
+
+]}

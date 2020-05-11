@@ -1,0 +1,47 @@
+<h3>Liste des paniers</h3>
+
+<br>
+
+<div class="panel-body">
+    <table class="table table-striped table-bordered ">
+        <thead class="thead-dark">
+            <tr>
+                <th>Date validation</th>
+                <th>numClient</th>
+                <th>Commandes</th>
+                <th>Prix total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let panier of paniers">
+
+                <td>{{panier.dateValidation}}</td>
+                <td>{{panier.numClient}}</td>
+                <td>
+                    <select size="3">
+                        <option *ngFor="let commande of commandes" class="list-group" >
+                            {{commande.manifestation}}
+                            {{commande.quantite}}
+                        </option>
+                    </select>
+                </td>
+
+                <td>{{panier.total}}</td>
+
+                <td>
+                    <button (click)="redirectToShow(panier.id)" class="btn btn-sm btn-success"><fa-icon class="icon p-0" [icon]="faInfoCircle">Show</fa-icon></button>
+                    <button *ngIf="isClient" (click)="redirectToUpdate(panier.id)" class="btn btn-sm btn-warning"><fa-icon [icon]="faEdit">Update</fa-icon></button>
+                 <button *ngIf="isClient" (click)="delete(panier.id)" class="btn btn-sm btn-danger"><fa-icon [icon]="faTrashAlt">Delete</fa-icon></button> 
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+    <a *ngIf="isClient" name="" id="" class="btn btn-info" href="#" role="button" [routerLink]="['/panier-ad']"><fa-icon class="icon p-2" [icon]="faPlusSquare">+ Ajouter une salle</fa-icon></a>
+
+
+
+    <a name="" id="" class="btn btn-info" href="#" role="button" [routerLink]="['/public']"><fa-icon class="icon p-2" [icon]="faHome">Retour à l'accueil</fa-icon></a>

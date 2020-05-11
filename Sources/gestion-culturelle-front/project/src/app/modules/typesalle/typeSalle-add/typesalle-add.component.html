@@ -1,0 +1,18 @@
+<h2>Ajouter un type de salle</h2>
+<br>
+
+<div [hidden]="submitted">
+    <form>
+
+        <div class="form-group">
+            
+            <label for="typeSalle">Nouveau type :</label>
+            <input type="text" class="form-control" id="label" placeholder="Entrer votre label" required [(ngModel)]="typeSalle.label" name="typeSalleLabel">
+        </div>
+
+        <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/typesalle-list']">Annuler</a>
+
+        <button (click)="add()" class="btn btn-secondary" [disabled]="typeSalle.length==0">Ajouter</button>
+
+    </form>
+</div>

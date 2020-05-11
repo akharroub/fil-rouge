@@ -1,0 +1,17 @@
+<h2>Mettre à jour un type de salle</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+   
+        <div class="form-group">
+            <label for="label">Nouveau label :</label>
+            <input type="text" class="form-control" id="label" placeholder="Entrer votre label" required [(ngModel)]="typeSalle.label"
+                name="typeSalleLabel">
+        </div>
+
+        <a name="" id="" class="btn btn-secondary" href="#" role="button" [routerLink]="['/typesalle-list']">Annuler</a>
+
+        <button type="submit" class="btn btn-secondary">Valider</button>
+    </form>
+</div>

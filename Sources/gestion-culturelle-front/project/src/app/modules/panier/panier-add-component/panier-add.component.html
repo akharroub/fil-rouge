@@ -1,0 +1,51 @@
+<h2>Ajouter au panier</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <label for="dateValidation">Date de validation :</label>
+                        <input type="date" name="dateValidation" class="form-control" id="dateValidation"
+                            placeholder="Entrer la date de validation" [(ngModel)]="panierDto.dateValidation">
+                    </div>
+                    <div class="form-group">
+
+                        <label for="numClient">Numero de client :</label>
+                        <input type="text" name="type" class="form-control" id="numClient"
+                            placeholder="{{userDto.numClient}}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="manifestation">Manifestation :</label>
+                        <input type="text" name="manifestation" class="form-control" id="manifestation"
+                            [(ngModel)]="manifestationDto.label" readonly>
+                        {{manifestationDto.label}}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prix">Prix du billet(en €) :</label>
+                        <input type="text" name="prix" class="form-control" id="prix"
+                            [(ngModel)]="manifestationDto.prixBillet" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nbreBillets">Nombre de billets:</label>
+                        <input type="number" name="nbreBillets" class="form-control" id="nbreBillets"
+                            placeholder="Entrer le nombre de billets " [(ngModel)]="quantite">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<button (click)="add()" class="btn btn-secondary">Ajouter au panier</button>
+
+<a name="" id="" class="btn btn-secondary" href="#" role="button"
+    [routerLink]="['/public/manifestation-list']">Annuler</a>

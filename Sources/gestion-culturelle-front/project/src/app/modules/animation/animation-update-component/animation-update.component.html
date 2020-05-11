@@ -1,0 +1,43 @@
+<h2>Mettre à jour une Animation</h2>
+<br>
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="form-group">
+
+                        <label for="label">Nouveau label :</label>
+                        <input type="text" class="form-control" id="label" placeholder="Entrer votre label" required
+                            [(ngModel)]="animation.label" name="label">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Type d'animation :</label>
+                        <input type="text" class="form-control" id="type" placeholder="Entrer le type" required
+                            [(ngModel)]="animation.type" name="type">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prix">Prix de l'animation(en €) :</label>
+                        <input type="text" class="form-control" id="prix" placeholder="Entrer le prix" required
+                            [(ngModel)]="animation.prix" name="prix">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nbreSpectateursPrevus">Nombre de spectateurs prévus :</label>
+                        <input type="text" class="form-control" id="nbreSpectateursPrevus"
+                            placeholder="Entrer le nom de places reservees Vip" required
+                            [(ngModel)]="animation.nbreSpectateursPrevus" name="placesVip">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a name="" id="" class="btn btn-secondary" href="#" role="button"
+            [routerLink]="['/public/animation-list']">Annuler</a>
+
+        <button type="submit" class="btn btn-secondary">Valider</button>
+    </form>
+</div>
